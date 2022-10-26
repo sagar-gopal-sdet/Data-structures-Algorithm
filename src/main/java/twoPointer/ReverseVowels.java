@@ -1,9 +1,8 @@
-package com.week2;
+package twoPointer;
 
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ReverseVowels {
     public String reverseVowels(String s){

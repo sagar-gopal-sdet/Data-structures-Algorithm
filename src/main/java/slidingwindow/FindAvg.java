@@ -1,4 +1,4 @@
-package com.week3.slidingwindow;
+package slidingwindow;
 
 import org.testng.annotations.Test;
 

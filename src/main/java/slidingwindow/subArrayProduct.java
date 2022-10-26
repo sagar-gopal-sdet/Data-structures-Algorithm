@@ -1,4 +1,4 @@
-package com.week3.slidingwindow;
+package slidingwindow;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -45,11 +45,15 @@ public class subArrayProduct {
     * */
 
     public int subArrayProductBruteforce(int[]nums, int k){
-        int count=0, product =nums[0];
+        int count=0;
         for(int i=0;i<nums.length;i++){
-            if(nums[i]<k) count++;
+            int product = 1;
+            product*=nums[i];
+            if(product<k) count++;
             for(int j=i+1;j<nums.length;j++){
                 product *= nums[j];
+                if(product<k) count++;
+                else break;
             }
         }
 

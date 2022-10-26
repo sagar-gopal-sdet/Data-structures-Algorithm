@@ -1,6 +1,5 @@
-package com.week2;
+package twoPointer;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ReverseLetters {

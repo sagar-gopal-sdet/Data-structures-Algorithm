@@ -1,4 +1,4 @@
-package com.week2;
+package twoPointer;
 
 import org.testng.annotations.Test;
 

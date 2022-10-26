@@ -1,4 +1,4 @@
-package com.week2;
+package twoPointer;
 
 public class MergeSortedArrays {
     public int[] merge(int[] nums1, int m, int[] nums2, int n){

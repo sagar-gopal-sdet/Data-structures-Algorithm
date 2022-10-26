@@ -1,4 +1,4 @@
-package com.week3.slidingwindow;
+package slidingwindow;
 
 public class findMinimumLength {
     public int findLength(int[] nums, int target){

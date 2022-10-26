@@ -1,9 +1,6 @@
-package com.week2;
-
-import org.testng.annotations.Test;
+package twoPointer;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class rough {
     public static void main(String args[]){

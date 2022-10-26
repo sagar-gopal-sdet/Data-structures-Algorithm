@@ -1,8 +1,6 @@
-package com.week2;
+package twoPointer;
 
 import org.testng.annotations.Test;
-
-import javax.swing.plaf.synth.SynthLookAndFeel;
 
 public class LongPressedName {
 

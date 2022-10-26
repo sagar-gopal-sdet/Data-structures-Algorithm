@@ -1,4 +1,4 @@
-package com.week3.slidingwindow;
+package slidingwindow;
 
 public class Recolor {
     public int findMinimumRecoloring(String blocks, int k){
