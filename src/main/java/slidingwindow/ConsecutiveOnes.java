@@ -2,6 +2,7 @@ package slidingwindow;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import twoPointer.FlippingImage;
 
 public class ConsecutiveOnes {
 
@@ -15,6 +16,13 @@ public class ConsecutiveOnes {
     public void testData2(){
         int[] arr = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
         Assert.assertEquals(longestOnesBruteforce(arr, 3), 10);
+    }
+
+    @Test
+    public void testData3(){
+        int[] arr = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
+        System.out.println(longestOnes(arr,3));
+        //Assert.assertEquals(longestOnes(arr, 3), 10);
     }
 
 
@@ -60,6 +68,28 @@ public class ConsecutiveOnes {
                 }
             }
             count = Integer.max(count, tempCount);
+        }
+        return count;
+    }
+
+    public int longestOnes(int[] nums, int k){
+        int count = 0, i=0, j=0, flip=0;
+        while(j<nums.length){
+            if(nums[j]==1) j++;
+            else {
+                if(flip<k){
+                    flip++;
+                    j++;
+                } else {
+                    while(flip>=k){
+                        if(nums[i]==0){
+                            flip--;
+                        }
+                        i++;
+                    }
+                }
+            }
+            count = Math.max(count,j-i);
         }
         return count;
     }
