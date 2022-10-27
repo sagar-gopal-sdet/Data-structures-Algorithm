@@ -54,6 +54,7 @@ public class subArrayProduct {
                 product *= nums[j];
                 if(product<k) count++;
                 else break;
+
             }
         }
 
