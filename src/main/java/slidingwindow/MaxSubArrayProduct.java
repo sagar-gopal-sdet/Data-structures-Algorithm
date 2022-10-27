@@ -113,6 +113,7 @@ public class MaxSubArrayProduct {
 
                 product = Integer.max(product, temp);
 
+
             }
 
             temp = nums[nums.length - 1];
