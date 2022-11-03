@@ -13,6 +13,7 @@ public class UniqueEmail {
         Assert.assertEquals(findUniqueEmailCount(new String[] {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"}),2);
     }
 
+
 /*Pseudocode:
 Initialise Hashset for String.
 Interate the input array using for loop with range s.length

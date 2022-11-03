@@ -45,6 +45,7 @@ public class CommonWord {
                 output = val.getKey();
             }
         }
+
         System.out.println(output);
         return output;
     }
