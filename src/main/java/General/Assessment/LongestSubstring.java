@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class LongestSubstring {
     /*TEST DATA*/
@@ -46,6 +47,24 @@ public class LongestSubstring {
             window =Integer.max(window,temp);
         }
 
+        return window;
+    }
+
+    public int findLongestSubstringSimplified(String s){
+        Set<Character> set = new HashSet<>();
+        int i=0,j=0,window = 0, temp = 0;
+        while(j<s.length()){
+            if(set.contains(s.charAt(j))){
+                temp = j-i;
+                set.remove(s.charAt(i));
+                i++;
+            } else {
+                set.add(s.charAt(j));
+                temp = set.size();
+                j++;
+            }
+            window=Integer.max(temp,window);
+        }
         return window;
     }
 }
