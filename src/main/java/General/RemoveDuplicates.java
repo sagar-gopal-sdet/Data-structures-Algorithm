@@ -13,7 +13,7 @@ public class RemoveDuplicates {
     public void td1(){
         int[] arr = {1,2,3,4,1,2,3,2,1};
         System.out.println(removeDupes(arr));
-        //Assert.assertEquals(removeDupes(new int[] {1,2,3,4,1,2,3,21}),HashSet<Integer>(4));
+        
     }
 
     public Set<Integer> removeDupes(int[] arr){
