@@ -1,4 +1,4 @@
-package General.Assessment;
+package General;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

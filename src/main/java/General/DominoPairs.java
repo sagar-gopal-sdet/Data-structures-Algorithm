@@ -1,4 +1,4 @@
-package General.Assessment;
+package General;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -31,7 +31,7 @@ public class DominoPairs {
                 count++;
                 j++;
             }
-            if(j)
+
         }
 
         return 0;

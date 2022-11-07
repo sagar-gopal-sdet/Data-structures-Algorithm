@@ -1,4 +1,4 @@
-package General.Assessment;
+package General;
 
 public class DutchFlag {
 
