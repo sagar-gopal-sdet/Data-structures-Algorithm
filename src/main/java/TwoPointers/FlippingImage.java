@@ -4,8 +4,14 @@ import org.testng.annotations.Test;
 
 public class FlippingImage {
     @Test
-    public void testData() {
+    public void testData1() {
         int[][] arr = {{1, 1, 0}, {1, 0, 1}, {0, 0, 0}};
+        System.out.println(flipAndInvertImage(arr));
+    }
+
+    @Test
+    public void testData2() {
+        int[][] arr = {{1, 0, 0}, {0, 0, 1}, {1, 1, 1}};
         System.out.println(flipAndInvertImage(arr));
     }
 

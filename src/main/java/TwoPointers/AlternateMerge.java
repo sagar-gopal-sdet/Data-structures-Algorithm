@@ -30,6 +30,11 @@ public class AlternateMerge {
         Assert.assertEquals(mergeAlternateChars("abc", "p"), "apbc");
     }
 
+    @Test
+    public void testData6() {
+        Assert.assertEquals(mergeAlternateChars("abc", ""), "abc");
+    }
+
     /*Psudocode-
     * Verify if one of the string input length is 0. If yes, return the other string input.
     * ELse, Initialise variable i to hold the minimum length out of 2 inputs.
