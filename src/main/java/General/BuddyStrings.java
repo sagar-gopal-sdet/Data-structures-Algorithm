@@ -31,6 +31,11 @@ public class BuddyStrings {
         Assert.assertEquals(buddyStringCheck("aaaaaaabc","aaaaaaacb"),true);
     }
 
+    @Test
+    public void td6(){
+        Assert.assertEquals(buddyStringCheck("aba","aba"),true);
+    }
+
 
 
 
@@ -49,13 +54,20 @@ public class BuddyStrings {
             }
         }
 
+        System.out.println(set1);
+        System.out.println(set2);
+        System.out.println(i);
 
+        if(set1.size()==1 && set1.equals(set2)) return true;
+        if(s.length()==2 && set1.size()==2 && set1.equals(set2) && i==s.length()) return false;
+
+        if(temp!=-1){
+
+        }
 
         int x = s.indexOf(temp);
         System.out.println(x);
         int y = goal.indexOf(temp);
-        if(set1.size()==1 && set1.equals(set2)) return true;
-        if(set1.size()==2 && set1.equals(set2) && x>=0) return false;
         s=s.replace(temp,s.charAt(y));
         System.out.println(s);
         s=s.substring(0,y)+temp+s.substring(y+1);
