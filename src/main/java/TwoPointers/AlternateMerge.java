@@ -48,11 +48,9 @@ public class AlternateMerge {
 
     public String mergeAlternateChars(String word1, String word2) {
         String s = "";
-        if (word1.length() == 0) {
-            return word2;
-        } else if (word2.length() == 0) {
-            return word1;
-        } else {
+        if (word1.length() == 0) return word2;
+        else if (word2.length() == 0) return word1;
+        else {
             int i = Integer.min(word1.length(), word2.length());
             int j = 0;
             while (j < i) {
@@ -61,7 +59,6 @@ public class AlternateMerge {
             }
             if (j < word1.length()) s += word1.substring(j);
             else if (j < word2.length()) s += word2.substring(j);
-
             return s;
         }
     }
