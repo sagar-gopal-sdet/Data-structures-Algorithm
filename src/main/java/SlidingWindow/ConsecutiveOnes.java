@@ -21,7 +21,7 @@ public class ConsecutiveOnes {
     public void testData3(){
         int[] arr = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
         System.out.println(longestOnes(arr,3));
-        //Assert.assertEquals(longestOnes(arr, 3), 10);
+        Assert.assertEquals(longestOnes(arr, 3), 10);
     }
 
 
