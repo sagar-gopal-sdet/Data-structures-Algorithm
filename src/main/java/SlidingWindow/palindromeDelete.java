@@ -1,6 +1,18 @@
 package SlidingWindow;
 
+
+import org.testng.Assert;
+
 public class palindromeDelete {
+
+    public void td1(){
+        Assert.assertEquals(validPalindrome("aba"), true);
+    }
+
+    public boolean validPalindrome(String s){
+
+        return false;
+    }
 
     /*PSEUDOCODE-
     * Initialise i=0, j= string length-1, count=0
