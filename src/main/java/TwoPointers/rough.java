@@ -10,6 +10,7 @@ public class rough {
         String s = "I'm Sagar";
         String s1="Gopal";
         String[] s3 = (s+" "+s1).split(" ");
+        System.out.println(s.substring(0,1));
 
     }
 
