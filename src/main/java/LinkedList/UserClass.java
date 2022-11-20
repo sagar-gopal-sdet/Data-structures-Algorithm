@@ -12,7 +12,14 @@ public class UserClass {
         ll.add(140);
         ll.add(13);
         ll.add(15);
+        ll.add(15);
+        ll.add(15);
         ll.print();
-        System.out.println(ll.get(5));
+        ll.remove(20);
+        ll.set(3,45);
+        System.out.println("After deleting duplication:");
+        ll.print();
+
+        //System.out.println(ll.get(5));
     }
 }

@@ -56,12 +56,15 @@ public class LinkedListImplementation {
         return -1;
     }
 
-    public int remove(int index){
+    public void remove(int index){
         int in = 0;
+        int flag = 0;
         Node temp = head;
         while(temp.next!=null){
-            if(in == index){
-
+            if(in == index-1){
+                temp.next = temp.next.next;
+                flag=1;
+                break;
             }
             else {
                 temp = temp.next;
@@ -69,6 +72,43 @@ public class LinkedListImplementation {
             }
 
         }
-        return -1;
+        if(flag==0) System.out.println("Index not found");
+    }
+
+    public void set(int index, int val){
+        int in = 0;
+        int flag = 0;
+        Node temp = head;
+        while(temp.next!=null){
+            if(in == index){
+                temp.value = val;
+                flag=1;
+                break;
+            }
+            else {
+                temp = temp.next;
+                in++;
+            }
+
+        }
+        if(flag==0) System.out.println("Index not found");
+    }
+
+    public void removeByValue()
+
+    public Node deleteDuplicates(){
+        while(head!=null && head.next!=null && head.next.value==head.value){
+            head=head.next;
+        }
+        if(head==null) return head;
+        Node temp = head;
+        while(temp.next!= null){
+            if(temp.value == temp.next.value){
+                temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
+            }
+        }
+        return head;
     }
 }
