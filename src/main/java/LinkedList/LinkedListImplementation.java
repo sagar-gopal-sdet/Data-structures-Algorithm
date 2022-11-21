@@ -94,7 +94,35 @@ public class LinkedListImplementation {
         if(flag==0) System.out.println("Index not found");
     }
 
-    public void removeByValue()
+    public int indexOf(int val){
+        Node temp = head;
+        int in = 0;
+        while(temp!=null){
+            if(temp.value==val){
+                return in;
+            } else {
+                temp=temp.next;
+                in++;
+            }
+        }
+        return -1;
+    }
+
+    public int lastIndexOf(int val){
+        Node temp = head;
+        int in = 0,lastIndex=-1;
+        while(temp!=null){
+            if(temp.value==val){
+                lastIndex = in;
+                temp=temp.next;
+                in++;
+            } else {
+                temp=temp.next;
+                in++;
+            }
+        }
+        return lastIndex;
+    }
 
     public Node deleteDuplicates(){
         while(head!=null && head.next!=null && head.next.value==head.value){
