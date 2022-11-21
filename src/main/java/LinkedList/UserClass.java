@@ -17,8 +17,9 @@ public class UserClass {
         ll.print();
         ll.remove(20);
         ll.set(3,45);
-        System.out.println("After deleting duplication:");
-        ll.print();
+
+        System.out.println("Index of: "+ll.indexOf(156));
+        System.out.println( "Last index of" + ll.lastIndexOf(150));
 
         //System.out.println(ll.get(5));
     }
