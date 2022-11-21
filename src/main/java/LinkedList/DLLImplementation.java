@@ -1,2 +1,5 @@
-package LinkedList;public class DLLImplementation {
+package LinkedList;
+
+public class DLLImplementation {
+
 }
