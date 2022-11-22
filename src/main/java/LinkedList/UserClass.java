@@ -21,6 +21,12 @@ public class UserClass {
         System.out.println("Index of: "+ll.indexOf(156));
         System.out.println( "Last index of" + ll.lastIndexOf(150));
 
-        //System.out.println(ll.get(5));
+        System.out.println("#####################DOUBLY LINKED LIST###################");
+        DLLImplementation dl = new DLLImplementation();
+        dl.add(10);
+        dl.add(14);
+        dl.add(15);
+        dl.print();
+
     }
 }

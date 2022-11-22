@@ -8,7 +8,7 @@ import java.util.Stack;
 public class Scores {
     @Test
     public void td1(){
-        Assert.assertEquals(calculateScores(new String[] {"C", "5","-2","4","C","D","9","+","+"}), 27);
+        Assert.assertEquals(calculateScores(new String[] {"5","-2","4","C","D","9","+","+"}), 27);
     }
 
     @Test
@@ -16,34 +16,32 @@ public class Scores {
         Assert.assertEquals(calculateScores(new String[]{"5","2","C","D","+"}), 30);
     }
 
-    public int calculateScores(String[] s){
-        int sum=0;
-        if(s.length == 0) return 0;
-        if(s.length==1){
-            if(s[0] != "C" || s[0] != "+" || s[0]!="D") return Integer.parseInt(s[0]);
-            else return 0;
-        }
+    public int calculateScores(String[] operations){
 
-        Stack<Integer> ss = new Stack<>();
-        for(int i=0;i<s.length;i++){
-            if(!ss.isEmpty()){
-                if(s[i]=="C") ss.pop();
-                else if (s[i]=="D") ss.add(ss.peek()*2);
-                else if (s[i]=="+") {
-                    if(ss.size()>=2) ss.add(ss.get(ss.size()-1)+ss.get(ss.size()-2));
-                } else ss.add(Integer.parseInt(s[i]));
+            Stack<Integer> stack = new Stack<>();
 
-            } else {
-                if(s[i] != "C" || s[i] != "+" || s[i]!="D") ss.add(Integer.parseInt(s[i]));
-                else continue;
+            for (String s : operations) {
+                if (s.equals("+")) {
+                    int a = stack.pop();
+                    int newScore = a + stack.peek();
+                    stack.push(a);
+                    stack.push(newScore);
+                }
+                else if (s.equals("D")) {
+                    stack.push(2 * stack.peek());
+                }
+                else if (s.equals("C")) {
+                    stack.pop();
+                }
+                else stack.push(Integer.parseInt(s));
             }
-            System.out.println(ss);
+
+            int totalScore = 0;
+            while (!stack.isEmpty()) totalScore += stack.pop();
+
+            return totalScore;
         }
 
 
-        for(int i=0;i<ss.size();i++){
-            sum+=ss.get(i);
-        }
-        return sum;
     }
-}
+
