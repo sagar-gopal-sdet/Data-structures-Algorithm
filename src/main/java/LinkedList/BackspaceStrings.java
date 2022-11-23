@@ -33,8 +33,6 @@ public class BackspaceStrings {
             if(c!='#') st.push(c);
             else if(c=='#' && !st.isEmpty()) st.pop();
         }
-        System.out.println(ss.size());
-        System.out.println(st.size());
         if(ss.equals(st)) return true;
         return false;
     }
