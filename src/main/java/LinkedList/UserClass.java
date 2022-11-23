@@ -10,7 +10,6 @@ public class UserClass {
         ll.add(20);
         ll.add(30);
         ll.add(140);
-        ll.add(13);
         ll.add(15);
         ll.add(15);
         ll.add(15);
