@@ -1,2 +1,4 @@
-package Recursion;public class Fibonacci {
+package Recursion;
+
+public class Fibonacci {
 }
