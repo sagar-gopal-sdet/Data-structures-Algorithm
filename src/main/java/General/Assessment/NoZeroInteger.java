@@ -30,15 +30,12 @@ public class NoZeroInteger {
 
         int[] output = new int[2];
         int i=1,j=n-1;
-
         while(i<j){
             if(containsZeroOrNot(i) && containsZeroOrNot(j)){
                 output[0]=i;
                 output[1]=j;
             }
         }
-
-
         return output;
 
 
