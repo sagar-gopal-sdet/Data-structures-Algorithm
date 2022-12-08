@@ -10,6 +10,10 @@ public class SquareRoot {
     public void td1(){
         Assert.assertEquals(findSquareRoot(8),2);
     }
+    @Test
+    public void td2(){
+        Assert.assertEquals(findSquareRoot(25),2);
+    }
 
     public int findSquareRoot(int x){
         int left=1, right=x,out=0;
