@@ -37,7 +37,6 @@ public class KeyboardRows {
 
         for(String x : s){
             String temp = "";
-
             if(q.contains(x.substring(0,1))) temp = q;
             else if (a.contains(x.substring(0,1))) temp = a;
             else if (z.contains(x.substring(0,1))) temp = z;
@@ -51,7 +50,6 @@ public class KeyboardRows {
             if(flag == 0) al.add(x);
         }
         String[] out = al.toArray(new String[0]);
-
         return out;
     }
 }
