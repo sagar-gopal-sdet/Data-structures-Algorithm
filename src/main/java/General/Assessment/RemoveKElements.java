@@ -1,31 +1,34 @@
 package General.Assessment;
 
+import com.beust.ah.A;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class RemoveKElements {
 
     @Test
     public void td1(){
-        Assert.assertEquals(removeContinuousKElements("deeedbbcccbdaa", 3), "aa");
+        Assert.assertEquals(removeElements("deeedbbcccbdaa", 3), "aa");
     }
 
     @Test
     public void td2(){
-        Assert.assertEquals(removeContinuousKElements("deeedbbcccbdaaa",3), "");
+        Assert.assertEquals(removeElements("deeedbbcccbdaaa",3), "");
     }
 
     @Test
     public void td3(){
-        Assert.assertEquals(removeContinuousKElements("deeedbbcccbbdaa",3), "ddbdaa");
+        Assert.assertEquals(removeElements("deeedbbcccbbdaa",3), "ddbdaa");
     }
 
     @Test
     public void td4(){
-        Assert.assertEquals(removeContinuousKElements("deeedbbcccbbdaa",0), "deeedbbcccbbdaa");
+        Assert.assertEquals(removeElements("deeedbbcccbbdaa",0), "deeedbbcccbbdaa");
     }
 
     /*Pseudocode-
@@ -68,7 +71,9 @@ public class RemoveKElements {
         return op;
     }
 
-    public String removeElements(String s){
+    public String removeElements(String s, int k){
+        if(k==0) return s;
+        if(k==1) return "";
 
         return s;
     }
