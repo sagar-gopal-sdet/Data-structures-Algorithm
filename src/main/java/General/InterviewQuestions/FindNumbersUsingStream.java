@@ -1,4 +1,4 @@
-package InterviewQuestions;
+package General.InterviewQuestions;
 
 public class FindNumbersUsingStream {
     
