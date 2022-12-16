@@ -1,4 +1,4 @@
-package InterviewQuestions;
+package General.InterviewQuestions;
 
 import jdk.dynalink.beans.StaticClass;
 import org.testng.Assert;
