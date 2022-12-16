@@ -1,4 +1,4 @@
-package InterviewQuestions;
+package General.InterviewQuestions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
