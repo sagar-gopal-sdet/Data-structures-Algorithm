@@ -11,7 +11,19 @@ public class NiceString {
     }
 
     public String findNiceString(String s){
-        String out = "";
+        String out = "",temp = ""+s.charAt(0);
+        int i=0,j=1;
+        while(j<s.length()){
+
+            temp = ""+s.charAt(i);
+            if(Math.abs(s.charAt(i)-s.charAt(j))==32){
+                temp += s.charAt(j++);
+            } else {
+                i++;
+                j++;
+            }
+            if(temp.length()>out.length()) out = temp;
+        }
 
         return out;
     }
