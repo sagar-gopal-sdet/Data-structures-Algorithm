@@ -21,6 +21,11 @@ public class RemoveAlternates {
     public void td3(){
         Assert.assertEquals(shootElements(8), 28);
     }
+
+    @Test
+    public void td4(){
+        Assert.assertEquals(shootElements(100000), 705017168);
+    }
     public int shootElements(int n){
         int points=0;
         ArrayList<Integer> al = new ArrayList<>();
@@ -35,7 +40,7 @@ public class RemoveAlternates {
             }
             al.removeAll(al1);
         }
-        System.out.println(al);
+        System.out.println(points);
         return points;
     }
 }
