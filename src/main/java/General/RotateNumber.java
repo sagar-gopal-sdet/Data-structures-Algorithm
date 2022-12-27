@@ -26,7 +26,7 @@ public class RotateNumber {
             al.add(al.get(0));
             al.remove(0);
         }
-        
+
         System.out.println(al);
         return 0;
     }
