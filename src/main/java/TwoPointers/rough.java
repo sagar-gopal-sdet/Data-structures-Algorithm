@@ -1,19 +1,21 @@
 package TwoPointers;
 
 import javax.security.auth.callback.CallbackHandler;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class rough {
     /*Class file just to verify some one line logics without impacting the framework*/
     public static void main(String args[]){
-        char ch = 'b';
-        char ch1 = 'B';
-        String s = "asdfghjkl";
-        s=s.replace('a','u');
-        StringBuilder sb = new StringBuilder("Sagar");
-
-        sb.setCharAt(0, Character.toUpperCase('u'));
-        System.out.println(sb.toString());
+        ArrayList<Integer> al = new ArrayList<>();
+        ArrayList<Integer> al1 = new ArrayList<>();
+        al.add(10);
+        al.add(1);
+        al.add(10);
+        al1.add(10);
+        int n = 0;
+        al.removeAll(al1);
+        System.out.println(al);
 
 
     }

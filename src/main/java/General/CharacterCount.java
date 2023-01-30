@@ -21,13 +21,10 @@ public class CharacterCount {
         for(int i=0;i<s.length();i++){
             map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
             set.add(s.charAt(i));
-
         }
         for(int i=0;i<set.size();i++){
             s1=s1+map.get(s.charAt(i))+s.charAt(i);
         }
-
-
         return s1;
     }
 
