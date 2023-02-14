@@ -1,3 +1,27 @@
+class A {
+
+    public A() {
+
+        System.out.println("message A");
+
+    }
+
+}
+
+class B extends A{
+
+    public  B(){
+
+        System.out.println("message B");
+
+    }
+
+}
+
+
+
+
+
 public class Code1 {
 
     /*Pseudocode
@@ -10,6 +34,10 @@ public class Code1 {
     * Considering the the random number as box location, verify the box is empty.
     * If empty, add 1 and break;
     *  */
+
+    public static void main(String[] args) {
+        B obj = new B();
+    }
 
 }
 
